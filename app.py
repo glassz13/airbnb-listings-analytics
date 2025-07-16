@@ -350,37 +350,6 @@ if st.button("Estimate Price", type="primary"):
     st.success(f"Estimated price: ${price:,.0f}")
     st.caption("Based on similar listings in current filters")
 
-
-# --- Price Prediction Section Using Simple Ml Model ---
-st.markdown("---")
-st.markdown("🚀 Quick Price Estimator")
-
-# Simple input controls
-col1, col2, col3 = st.columns(3)
-with col1:
-    guests = st.selectbox("Guests", [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], index=1)
-with col2:
-    bedrooms = st.selectbox("Bedrooms", [1, 2, 3, 4, 5, 6, 7, 8], index=0)
-with col3:
-    room_type = st.selectbox("Room Type", df['room_type'].unique())
-
-if st.button("Estimate Price", type="primary"):
-    # Train simple model
-    model = RandomForestRegressor(random_state=42)
-    X = pd.get_dummies(df[['accommodates', 'bedrooms', 'room_type']])
-    model.fit(X, df['price'])
-    
-    # Prepare input
-    input_data = pd.DataFrame([[guests, bedrooms, room_type]],
-                            columns=['accommodates', 'bedrooms', 'room_type'])
-    input_data = pd.get_dummies(input_data)
-    input_data = input_data.reindex(columns=X.columns, fill_value=0)
-    
-    # Predict and display
-    price = model.predict(input_data)[0]
-    st.success(f"Estimated price: ${price:,.0f}")
-    st.caption("Based on similar listings in current filters")
-
 # Footer
 st.markdown("---")
 st.markdown("Built with 💛 by Mohit Kumar | Last Updated: July 2025")
