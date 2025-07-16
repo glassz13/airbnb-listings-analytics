@@ -8,7 +8,7 @@ It provides actionable insights on pricing, host behavior, property attributes, 
 
 ## 🚀 Live App
 
-[https://your-streamlit-link.streamlit.app/](https://your-streamlit-link.streamlit.app/)
+https://airbnb-listings-analytics-naojm2epkcttb4q2qtkzvl.streamlit.app/
 
 ---
 
