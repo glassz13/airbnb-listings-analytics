@@ -34,6 +34,8 @@ https://airbnb-listings-analytics-naojm2epkcttb4q2qtkzvl.streamlit.app/
 - Neighborhood trends and comparisons
 - Price, reviews, and rating analysis
 - Downloadable filtered data
+- Quick Price Estimator: A simple machine learning model (RandomForest) predicts price based on guests, bedrooms, and room type
+
 
 ---
 
