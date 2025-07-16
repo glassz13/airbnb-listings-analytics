@@ -325,13 +325,14 @@ st.markdown("---")
 st.markdown("🚀 Quick Price Estimator")
 
 # Simple input controls
-col1, col2, col3 = st.columns(3)
+col1, col2, col3 = st.columns(3) 
 with col1:
-    guests = st.selectbox("Guests", [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], index=1)
+    guests = st.selectbox("Guests", [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], index=1, key="predict_guests")
 with col2:
-    bedrooms = st.selectbox("Bedrooms", [1, 2, 3, 4, 5, 6, 7, 8], index=0)
+    bedrooms = st.selectbox("Bedrooms", [1, 2, 3, 4, 5, 6, 7, 8], index=0, key="predict_bedrooms")
 with col3:
-    room_type = st.selectbox("Room Type", df['room_type'].unique())
+    room_type = st.selectbox("Room Type", df['room_type'].unique(), key="predict_room_type")
+
 
 if st.button("Estimate Price", type="primary"):
     # Train simple model
