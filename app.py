@@ -332,8 +332,7 @@ with col2:
     bedrooms = st.selectbox("Bedrooms", [1, 2, 3, 4, 5, 6, 7, 8], index=0, key="predict_bedrooms")
 with col3:
     room_type = st.selectbox("Room Type", df['room_type'].unique(), key="predict_room_type")
-
-
+    
 if st.button("Estimate Price", type="primary"):
     # Train simple model
     model = RandomForestRegressor(random_state=42)
