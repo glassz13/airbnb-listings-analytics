@@ -322,5 +322,9 @@ if st.checkbox("Show filtered data"):
 # Footer
 st.markdown("---")
 st.markdown("Built with 💛 by Mohit Kumar | Last Updated: July 2025")
+st.write("")
+st.write("")
+st.write("")
+st.write("") 
 
 
