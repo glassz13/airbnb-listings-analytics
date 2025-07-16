@@ -11,7 +11,7 @@ Airbnb Data Cleaning Pipeline
 import pandas as pd
 
 # Load the dataset
-df = pd.read_csv(r"C:\Users\babul\OneDrive\Desktop\deluluu\sara\selected_listings.csv")
+df = pd.read_csv("raw_airbnb.csv")
 
 # ========================
 # --- Step 1: Cleaning ---
