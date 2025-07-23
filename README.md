@@ -11,8 +11,6 @@ Includes a **Quick Price Estimator** via a simple ML model.
 
 https://airbnb-listings-analytics-naojm2epkcttb4q2qtkzvl.streamlit.app/
 
-![Dashboard Preview GIF / Screenshot Here](your-image-link.png)
-
 ---
 
 ## 📝 Executive Summary (Business Impact)
